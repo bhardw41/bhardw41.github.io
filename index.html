@@ -1,10 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Hello Coursera</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio website for Navya Bhardwaj." />
+  <title>Navya Bhardwaj</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<h1>Hello Navya</h1>
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-name">Navya Bhardwaj</div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- HOVER PREVIEW -->
+<div id="hover-preview">
+  <div class="preview-inner">
+    <div class="preview-stripe"></div>
+    <span class="preview-label" style="position:relative;z-index:1;">project preview</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">NB</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-eyebrow" id="hero-eyebrow">Computer Science Student — Michigan State University</div>
+  <h1 class="hero-name" id="hero-name">
+    <span class="hero-name-word" data-word="Navya"><span>Navya</span></span>
+    <span class="hero-name-word" data-word="Bhardwaj"><span>Bhardwaj</span></span>
+  </h1>
+  <p class="hero-tagline" id="hero-tagline">I enjoy solving real problems through software, data, systems, and clean engineering.</p>
+  <div class="hero-scroll" id="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Software Engineer</span>
+    <span>Problem Solver</span>
+    <span>Full Stack Development</span>
+    <span>Data & Infrastructure</span>
+    <span>AI Tools</span>
+    <span>Leadership</span>
+    <span>Software Engineer</span>
+    <span>Problem Solver</span>
+    <span>Full Stack Development</span>
+    <span>Data & Infrastructure</span>
+    <span>AI Tools</span>
+    <span>Leadership</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label reveal">About</div>
+  <div class="about-photo-wrap reveal" style="transition-delay:0.15s">
+    <div class="about-photo-stripe"></div>
+    <div class="about-photo-label">
+      <div class="photo-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="6" r="3" stroke="currentColor" stroke-width="1" opacity="0.4"></circle>
+          <path d="M2 16c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke="currentColor" stroke-width="1" opacity="0.4"></path>
+        </svg>
+      </div>
+      <span>Your photo here</span>
+    </div>
+    <label class="about-photo-upload" for="photo-file-input">Upload photo</label>
+    <input type="file" id="photo-file-input" accept="image/*">
+  </div>
+  <div class="about-body">
+    <p class="reveal" style="transition-delay: 0.1s">
+      I'm a Computer Science student at <em>Michigan State University Honors College</em>, with minors in Data Science, CMSE, and Business.
+    </p>
+    <p class="reveal" style="transition-delay: 0.2s">
+      I like building practical systems that connect software engineering, data, and infrastructure — from AI-powered developer tools to real-time observability dashboards.
+    </p>
+    <div class="about-meta reveal" style="transition-delay: 0.3s">
+      <div class="about-meta-item">
+        <span class="about-meta-label">Location</span>
+        <span class="about-meta-value">East Lansing, MI</span>
+      </div>
+      <div class="about-meta-item">
+        <span class="about-meta-label">Graduation</span>
+        <span class="about-meta-value">May 2026</span>
+      </div>
+      <div class="about-meta-item">
+        <span class="about-meta-label">Focus</span>
+        <span class="about-meta-value">Software · Data · Observability</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-orb-bg">
+    <div class="abstract-orb" style="width:500px;height:500px;background:var(--ink);top:-120px;right:-100px;animation-delay:0s;animation-duration:11s;"></div>
+    <div class="abstract-orb" style="width:300px;height:300px;background:var(--mid);bottom:0;left:20%;animation-delay:-4s;animation-duration:9s;"></div>
+  </div>
+  <div class="projects-header">
+    <h2 class="section-title reveal">Selected<br><em style="font-style:italic;color:var(--mid)">Work</em></h2>
+    <span class="projects-count reveal" style="transition-delay:0.15s">03 Projects</span>
+  </div>
+  <div class="project-row reveal" data-project="0" style="transition-delay:0.1s">
+    <span class="project-num">01</span>
+    <span class="project-name">AI-Powered Code Review Platform</span>
+    <div class="project-tags">
+      <span class="project-tag">LangChain</span>
+      <span class="project-tag">FastAPI</span>
+      <span class="project-tag">OpenAI</span>
+    </div>
+    <span class="project-year">2026</span>
+  </div>
+  <div class="project-row reveal" data-project="1" style="transition-delay:0.18s">
+    <span class="project-num">02</span>
+    <span class="project-name">PlayPal Sports Social Platform</span>
+    <div class="project-tags">
+      <span class="project-tag">ReactJS</span>
+      <span class="project-tag">Python</span>
+      <span class="project-tag">JavaScript</span>
+    </div>
+    <span class="project-year">2024</span>
+  </div>
+  <div class="project-row reveal" data-project="2" style="transition-delay:0.26s">
+    <span class="project-num">03</span>
+    <span class="project-name">ChatGPT-like PDF/NLP Bot</span>
+    <div class="project-tags">
+      <span class="project-tag">React</span>
+      <span class="project-tag">PDFMiner</span>
+      <span class="project-tag">NLP</span>
+    </div>
+    <span class="project-year">2024</span>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-orb-bg">
+    <div class="abstract-orb" style="width:420px;height:420px;background:var(--ink);bottom:-80px;left:-60px;animation-delay:-2s;animation-duration:13s;"></div>
+  </div>
+  <div class="section-label reveal">Skills &amp; Stack</div>
+  <div class="skills-grid">
+    <div class="reveal" style="transition-delay:0.1s">
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="95"></div></div></div>
+        <div class="skill-item"><span class="skill-name">HTML / CSS</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="92"></div></div></div>
+        <div class="skill-item"><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="82"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="78"></div></div></div>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:0.18s">
+      <div class="skill-group-title">Web &amp; Apps</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">ReactJS</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="86"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Node.js</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="80"></div></div></div>
+        <div class="skill-item"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="75"></div></div></div>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:0.26s">
+      <div class="skill-group-title">Data &amp; Infrastructure</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">Grafana / Prometheus</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="88"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Linux</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="84"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Ansible</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="78"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Azure DevOps</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="76"></div></div></div>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:0.34s">
+      <div class="skill-group-title">Tools &amp; Methods</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">Git / CI-CD</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="90"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Hugging Face</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="82"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Checkmarx</span><div class="skill-bar"><div class="skill-bar-fill" data-pct="76"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="experience-grid">
+    <div>
+      <h2 class="section-title reveal">Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">Jun 2025 — Aug 2025</span>
+        <div>
+          <div class="timeline-role">Technology Summer Analyst</div>
+          <div class="timeline-company">Morgan Stanley · Infrastructure Observability</div>
+          <p class="timeline-desc">Engineered an enterprise-grade Grafana dashboard for 100+ Linux hosts, integrating Prometheus, Ansible, Python pipelines, PromQL queries, and alerting to improve visibility into system health, memory, disk I/O, and CPU performance.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">May 2024 — Aug 2024</span>
+        <div>
+          <div class="timeline-role">Information Technology Intern</div>
+          <div class="timeline-company">Steelcase · Manufacturing Applications</div>
+          <p class="timeline-desc">Led migration of manufacturing applications from SVN to Azure DevOps, implemented Azure Pipelines for NuGet publishing, and used Checkmarx scans to reduce SAST issues by 49% and resolve SCA issues.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">May 2023 — Jul 2023</span>
+        <div>
+          <div class="timeline-role">Research Intern</div>
+          <div class="timeline-company">MSU College of Engineering · SEE Insight Team</div>
+          <p class="timeline-desc">Worked with Hugging Face APIs and transformer-based image segmentation models, expanded the model search space by 30x, used MSU HPCC to reduce compute time, and presented work at the Mid-Michigan Symposium for Undergraduate Research.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jan 2023 — May 2025</span>
+        <div>
+          <div class="timeline-role">Undergraduate Learning Assistant</div>
+          <div class="timeline-company">CSE 102 &amp; CSE 232 · Michigan State University</div>
+          <p class="timeline-desc">Mentored Python and C++ students through labs, help rooms, grading, and interactive classroom activities, supporting cohorts of 35–60 students across introductory programming courses.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">May 2026</span>
+        <div>
+          <div class="timeline-role">B.S. Computer Science</div>
+          <div class="timeline-company">Michigan State University Honors College · GPA 3.95</div>
+          <p class="timeline-desc">Minors in Data Science, CMSE, and Business, with coursework and project experience across software engineering, data systems, machine learning, and computational problem solving.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <div style="display:flex;justify-content:space-between;align-items:baseline">
+    <h2 class="section-title reveal">Leadership</h2>
+    <span class="reveal" style="font-size:12px;color:var(--mid);letter-spacing:0.06em;transition-delay:0.1s">Campus involvement</span>
+  </div>
+  <div class="leadership-grid reveal" style="transition-delay:0.2s">
+    <a class="leadership-card" href="#">
+      <span class="leadership-date">2023 — Present</span>
+      <h3 class="leadership-title">SpartaHack</h3>
+      <p class="leadership-excerpt">Grew from Marketing Team Member to Co-Director for the Midwest's largest hackathon, supporting outreach, planning, and student engagement.</p>
+      <span class="leadership-arrow">→</span>
+    </a>
+    <a class="leadership-card" href="#">
+      <span class="leadership-date">2024 — Present</span>
+      <h3 class="leadership-title">Women in Computing</h3>
+      <p class="leadership-excerpt">Served as Webmaster and President, helping build community, programming, and visibility for women in computing at MSU.</p>
+      <span class="leadership-arrow">→</span>
+    </a>
+    <a class="leadership-card" href="#">
+      <span class="leadership-date">2023 — Present</span>
+      <h3 class="leadership-title">Resident Assistant</h3>
+      <p class="leadership-excerpt">Supported students in McDonel Hall through community-building, mentorship, and resident-centered programming.</p>
+      <span class="leadership-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div>
+    <h2 class="contact-heading reveal">
+      Let's<br>build<br>something<br><em>together.</em>
+    </h2>
+  </div>
+  <div class="contact-details">
+    <a class="contact-link reveal" href="mailto:bhardw41@msu.edu" style="transition-delay:0.1s">
+      <span class="contact-link-label">Email</span>
+      <span class="contact-link-value">bhardw41@msu.edu <span class="contact-link-arrow">↗</span></span>
+    </a>
+    <a class="contact-link reveal" href="https://linkedin.com/in/navya-bhardwaj-bhardwaj/" target="_blank" style="transition-delay:0.2s">
+      <span class="contact-link-label">LinkedIn</span>
+      <span class="contact-link-value">linkedin.com/in/navya-bhardwaj <span class="contact-link-arrow">↗</span></span>
+    </a>
+    <a class="contact-link reveal" href="https://github.com/bhardw41" target="_blank" style="transition-delay:0.3s">
+      <span class="contact-link-label">GitHub</span>
+      <span class="contact-link-value">github.com/bhardw41 <span class="contact-link-arrow">↗</span></span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-copy">© 2026 Navya Bhardwaj</span>
+  <ul class="footer-links">
+    <li><a href="https://github.com/bhardw41" target="_blank">GitHub</a></li>
+    <li><a href="https://linkedin.com/in/navya-bhardwaj-bhardwaj/" target="_blank">LinkedIn</a></li>
+  </ul>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
-
